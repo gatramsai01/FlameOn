@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^home home.php [NC,L]
+RewriteRule ^category/([a-zA-Z]+)/([0-9]+) category.php?catgoryName=$1&categoryId=$2 [NC,L]
+RewriteRule ^recipe/([0-9]+) recipe_page.php?recipe_id=$1 [NC,L]
+RewriteRule ^contact contact.php [NC,L]
+RewriteRule ^about about.php [NC,L]
